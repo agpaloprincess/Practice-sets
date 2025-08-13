@@ -1,0 +1,34 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter 'A' for Area, 'P' for Perimeter, or 'X' to Exit: ");
+        char choice = Convert.ToChar(Console.ReadLine());
+
+        switch (choice)
+        {
+            case 'A':
+            case 'a':
+                Console.Write("Enter the radius: ");
+                double radiusA = Convert.ToDouble(Console.ReadLine());
+                double area = Math.PI * radiusA * radiusA;
+                Console.WriteLine("Area = " + area);
+                break;
+
+            case 'P':
+            case 'p':
+                Console.Write("Enter the radius: ");
+                double radiusP = Convert.ToDouble(Console.ReadLine());
+                double perimeter = 2 * Math.PI * radiusP; 
+                Console.WriteLine("Perimeter = " + perimeter);
+                break;
+
+            case 'X':
+            case 'x':
+                Console.WriteLine("Exit");
+                break;
+        }
+    }
+}
